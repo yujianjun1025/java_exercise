@@ -91,5 +91,17 @@ public class Main {
             System.out.println(ToStringBuilder.reflectionToString(student1));
         }
 
+
+
+        Integer xx = 12;
+        String json = JSON.toJSONString(xx);
+        System.out.println(json);
+        Integer value = (Integer)JSON.parse(json);
+
+        System.out.println(value);
+
+
+
+
     }
 }

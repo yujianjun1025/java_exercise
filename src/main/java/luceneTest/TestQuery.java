@@ -4,9 +4,6 @@ package luceneTest;
  * Created by yjj on 15/9/24.
  */
 
-import java.io.File;
-import java.io.IOException;
-
 import com.google.common.base.Joiner;
 import org.apache.commons.lang.builder.ToStringBuilder;
 import org.apache.lucene.analysis.Analyzer;
@@ -21,6 +18,9 @@ import org.apache.lucene.search.TopDocs;
 import org.apache.lucene.store.FSDirectory;
 import org.apache.lucene.util.Version;
 
+import java.io.File;
+import java.io.IOException;
+
 public class TestQuery {
     public static void main(String[] args) throws IOException, ParseException {
         String index = "/Users/yjj/q/code/MulitpleThreadShare/src/main/java/luceneTest/index";         //搜索的索引路径
@@ -32,7 +32,7 @@ public class TestQuery {
         Query query = null;
 
 
-        Analyzer analyzer = new     StandardAnalyzer(Version.LUCENE_36);
+        Analyzer analyzer = new StandardAnalyzer(Version.LUCENE_36);
         try {
             QueryParser qp = new QueryParser(Version.LUCENE_36, "body", analyzer);
             query = qp.parse(queryString);

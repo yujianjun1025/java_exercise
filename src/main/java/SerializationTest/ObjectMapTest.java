@@ -1,4 +1,4 @@
-package SerializationTest;
+package serializationTest;
 
 import java.io.IOException;
 import java.util.List;
