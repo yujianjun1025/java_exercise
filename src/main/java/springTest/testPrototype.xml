@@ -1,0 +1,6 @@
+<bean id="testA" class="springTest.A" scope="prototype">
+    <property name="testB" ref="testB"/>
+</bean>
+<bean id="testB" class="springTest.B" scope="prototype">
+<property name="testC" ref="testC"/>
+</bean>
